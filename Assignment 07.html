@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Flex Layout</title>
+</head>
+<style>
+    *{
+        box-sizing: border-box;
+    }
+    header {
+  padding: 30px;
+  text-align: center;
+  background: #1139bd;
+  color: white;
+  font-size: 20px;
+}
+
+    section{
+        display: flex;
+    }
+    nav{
+      flex: 1;
+      background-color: orangered;
+      padding: 20px;
+
+    }
+
+    nav li{
+        list-style-type: none;
+        padding: 0;
+    }
+    article{
+
+
+        flex:5;
+        background-color: pink;
+        padding: 5px;
+    }
+    h2{
+        color:crimson;
+    }
+
+footer {
+  text-align: center;
+  padding: 3px;
+  background-color: DarkSalmon;
+  color: white;
+}
+
+
+    @media (max-width: 500px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+
+</style>
+
+<body>
+    <h2>CSS Flex Layout</h2>
+<p>The Flexible Box Layout Module, makes it easier to design flexible responsive layout structure without using float or positioning.
+</p>
+
+<header>
+
+    Technologies
+</header>
+<section>
+    <nav>
+        <ul>
+            <li><a href = "#">JAVA</a></li>
+            <li><a href = "#">C#</a></li>
+            <li><a href = "#">RUBY</a></li>
+            <li><a href = "#">PYTHON</a></li>
+        </ul>
+    </nav>
+
+
+    <article>
+        <h1>
+            Java
+        </h1>
+        <p>Java provides a new additional package in Java 8 called java.util.stream. This package consists of classes, interfaces and enum to allows functional-style operations on the elements. You can use stream by importing java.util.stream package.
+        </p>
+    </article>
+    <article>
+        <h1>
+            C#
+        </h1>
+        <p> C# encompasses static typing, strong typing, lexically scoped, imperative, declarative, functional, generic, object-oriented (class-based), and component-oriented programming disciplines.</p>
+    </article>
+    <article>
+        <h1>
+            Ruby
+        </h1>
+        <p>Ruby is a pure Object-Oriented language developed by Yukihiro Matsumoto.</p>
+    </article>
+</section>
+
+<footer>
+    <p>Author: Hege Refsnes<br>
+    <a href="mailto:hege@example.com">hege@example.com</a></p>
+</footer>
+</body>
+</html>
