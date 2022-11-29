@@ -1,0 +1,50 @@
+<html>
+
+<head>
+    <style>
+        .body{
+            background-color: wheat;
+            border-style: solid;
+        }
+    </style>
+</head>
+<body>
+<form action="store.html" name="form1" class="body">
+    <p>Enter first name : 
+        <input type="text" name="firstname" id="firstname" required/>
+    </p>
+    <p>Enter last name :
+        <input type="text" name="lastname" id="lastname" required/>
+    </p>
+    <p>Enter address :
+        <textarea rows="5" cols="50" name="address" id="address"></textarea>
+    </p>
+    <p>Programs attended:
+        <input type="checkbox" id="program1" name="program"/>HTML
+        <input type="checkbox" id="program2" name="program"/>CSS 
+        <input type="checkbox" id="program3" name="program"/>Oracle
+    </p>
+    <p>Select the stream you belong to :
+        <input type="radio" id="stream1" name="streams"/>Mech 
+        <input type="radio" id="stream2" name="streams"/>EEE 
+        <input type="radio" id="stream3" name="streams"/>CS
+        <input type="radio" id="stream4" name="streams"/>IT
+    </p>
+    <p>Which training program would you like to attend?
+        <select id="training"/>
+            <option>HTML5 Advanced</option>
+            <option>Javascript</option>
+            <option>angular</option>
+        </select>
+    </p>
+    <p>upload your resume
+        <input type="file" size="15" name="fnm"> </p> 
+    <p>
+        <input type="hidden" value="myco" name="coname"> <br> 
+        <input type="button" value="exit" name="but"> 
+        <input type="submit" value="save"> 
+        <input type="reset" value="reset">
+    </p>
+</form>
+</body>
+</html>
