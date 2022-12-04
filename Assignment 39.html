@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Table hide and show using button</title>
+  </head>
+<body>
+<button onclick="myFunction()">Click me for Data!!!</button>
+<table id="testing">
+    <tr>
+        <th>Firstname</th>
+        <th>Lastname</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>Priya</td>
+        <td>Sharma</td>
+        <td>24</td>
+    </tr>
+    <tr>
+        <td>Arun</td>
+        <td>Singh</td>
+        <td>32</td>
+    </tr>
+    <tr>
+        <td>Sam</td>
+        <td>Watson</td>
+        <td>41</td>
+    </tr>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("testing");
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+</script>
+
+</body>
+</html>
+
