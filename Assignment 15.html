@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function fruitItems(){
+            var fruits = document.getElementById("fruit").value;
+            document.getElementById("result").innerHTML="Selected : "+fruits;
+        }
+    </script> 
+</head>
+
+<body>
+    <select id="fruit" onclick="fruitItems()">
+        <option value="Banana" selected style="background-color: yellow">Banana</option>
+        <option value="Apple" selected style="background-color: red">Apple</option>
+        <option value="Guava" selected style="background-color: green">Guava</option>
+    </select>
+    <p id="result"></p>
+</body>
+</html>

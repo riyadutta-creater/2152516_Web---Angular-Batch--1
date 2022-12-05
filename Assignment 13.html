@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p1" onclick="change()"> this is a new one </p>
+    Enter your message : <input type="text" id="message" onfocus="focus()" onblur="blur1()"/>
+    <h1 id="bigFont" onclick="blur()">heading</h1>
+    <h2 onclick="showCoords(event)">Hi this is riya!!!</h2>
+    <p id="demo1" ondblclick="dClick()">Hello bye</p>
+    <p id="demo"></p>
+    <audio id="myAudio" controls>
+        <source src="horse.ogg" type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+    </audio>
+    <button onclick="myFunction()">Try</button> 
+    <script>
+      function change(){ 
+        document.getElementById("p1").innerHTML="changed";
+        document.getElementById("p1").style.backgroundColor ="purple";
+    }
+       function blur(){
+        document.getElementById("bigFont").style.backgroundColor = "pink";
+       }
+       function focus(){
+          document.getElementById("message").style.backgroundColor = "red";
+       }
+       function blur1(){
+        document.getElementById("message").style.backgroundColor = "blue";
+       }
+       function showCoords(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            var coords = "X coords: " + x + ", Y coords: " + y;
+            document.getElementById("demo").innerHTML = coords;
+       }
+       function dClick(){
+        document.getElementById("demo1").style.backgroundColor = "red";
+        document.getElementById("demo1").style.border = "5px solid blue";
+       }
+       function myFunction() {
+        var x = document.getElementById("myAudio").duration;
+        document.getElementById("demo").innerHTML = x;
+        }
+        var fruit = document.getElementById("drop");
+        
+    </script>
+</body>
+</html>
