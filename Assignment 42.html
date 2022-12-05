@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Card Layout with Flexbox</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.header {
+    background-color: greenyellow;
+    height: 6em;
+}
+
+h1 {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: x-large;
+}
+
+.main {
+    width: 100%;
+    background-color: aquamarine;
+}
+
+.card-container {
+    width: 90%;
+    margin: 0 auto;
+    padding: 0.5em 0;
+}
+
+.city {
+    width: 90%;
+    margin: 0.5em auto;
+    background-color: rgba(31, 31, 31, 0.95);
+    border: 2px solid rgb(173, 223, 169);
+}
+
+.city-image,
+.description {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.city-image {
+    padding: 1.2em 1em;
+} 
+
+.description {
+    padding: 1em 2em;
+}
+
+.city-image img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+.description h2 {
+    padding-bottom: 0.5em;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+
+@media (min-width: 640px) { 
+
+.card-container {
+        display: flex;
+        flex-flow: wrap;
+    }
+
+.city {
+    flex: 1 0 48%;
+    margin: 1%;
+}
+
+@media (min-width: 1001px) {
+    .city {
+        flex: 1 0 31%;
+    }
+
+    .city:last-of-type {
+        flex-grow: 0;
+    }
+}
+}
+  </style>
+</head>
+
+<body>
+  <header class="header">
+      <div class="main-title">
+        <h1 class="title">Card Layout with Flexbox</h1>
+      </div>
+  </header>
+  <main class="main">
+    <div class="card-container">
+      <div class="city">
+        <a href="#">
+          <div class="city-image">
+            <img src="download1.jpg" alt="city">
+          </div>
+          <div class="description">
+            <h2>City 1</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non sunt adipisci sed tenetur commodi quo. Exercitationem, unde qui! Maiores ad dolores nemo. Voluptatum non dolore atque praesentium accusantium. Aliquam, autem.</p>
+          </div>
+        </a>
+      </div>
+      <div class="city">
+        <a href="#">
+          <div class="city-image">
+              <img src="download2.jpg" alt="city">
+          </div>
+          <div class="description">
+            <h2>City 2</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tenetur quis atque voluptate natus! Mollitia, similique labore commodi dolorum possimus ut laudantium iusto a omnis! Ipsum error eius explicabo quidem alias.
+            </p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum optio reiciendis, voluptatibus eligendi repellat ab aliquam expedita laudantium voluptatum odit quam sunt saepe cum corrupti rem velit at nulla modi.</p>
+            </div>
+          </a>
+        </div>
+        <div class="city">
+          <a href="#">
+            <div class="city-image">
+              <img src="download3.jpg" alt="city">
+            </div>
+            <div class="description">
+              <h2>City 3</h2>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur quod dignissimos corporis sunt totam maiores quibusdam, perspiciatis enim a similique! Molestiae magni mollitia natus nobis rerum exercitationem ad aliquid voluptas.
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+  </main>
+</body>
+</html>
